@@ -10,7 +10,7 @@ cart.get("/", (req, res) => {
   res.status(200).json(itemList);
 });
 
-/*
+
 cart.get("/:id", (req, res) => {
   let item = itemList[req.params.id];
   if (item) {
@@ -19,10 +19,10 @@ cart.get("/:id", (req, res) => {
     res.status(404).json("Id Not Found");
   }
 });
-*/
 
 
-/*
+
+
 cart.post("/", (req, res) => {
     itemList.push({
       id: req.body.id, 
@@ -37,9 +37,9 @@ cart.post("/", (req, res) => {
         quantity: req.body.quantity
     })
 });
-*/
 
-/*
+
+
 cart.put("/:id", (req, res) => {
   let selectedItem = itemList.find(item => item.id === req.params.id);
   // console.log(selectedItem);
@@ -52,9 +52,9 @@ cart.put("/:id", (req, res) => {
     res.status(404).json("Item Not Found");
   }
 });
-*/
 
-/*
+
+
 cart.delete("/:id", (req, res) => {
   let selectedItem = itemList.find(item => item.id === req.params.id);
   if (selectedItem) {
@@ -65,7 +65,6 @@ cart.delete("/:id", (req, res) => {
     res.status(404).json("That student isn't in this class!");
   }
 });
-*/
 
 
 // by default number parameters are strings. You can use "" or convert it.
