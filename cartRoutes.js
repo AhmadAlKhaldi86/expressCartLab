@@ -1,9 +1,10 @@
 const express = require("express");
 const cart = express.Router();
 
+cart.use(express.json());
+
 let itemList = require("./items");
 
-cart.use(express.json());
 
 cart.get("/", (req, res) => {
   res.status(200).json(itemList);
@@ -66,5 +67,8 @@ cart.delete("/:id", (req, res) => {
 });
 */
 
+
 // by default number parameters are strings. You can use "" or convert it.
+
+
 module.exports = cart;
