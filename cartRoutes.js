@@ -97,6 +97,7 @@ cart.get("/:id", function(req, res) {
   pool.query("SELECT * FROM \"shoppingCart\" WHERE id =" + req.params.id).then(result => {
     if (result.rows.length < 1) {
       res.send("ID does not exist")
+      // 404 status to add.
     } else {
       res.json(result.rows);
     }
